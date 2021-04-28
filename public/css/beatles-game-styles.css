@@ -1,0 +1,85 @@
+body {
+  text-align: center;
+  background-color: #FFFAFA;
+
+}
+
+h3 {
+  font-family: 'Darker Grotesque', sans-serif;
+  font-size: 2rem;
+  margin:  1%;
+  cursor: pointer;
+}
+
+h4 {
+  font-family: 'Darker Grotesque', sans-serif;
+  font-size: 1.5rem;
+  margin:  1%;
+  cursor: pointer;
+}
+#level-title {
+  font-family: 'Darker Grotesque', sans-serif;
+  font-size: 3rem;
+  margin:  3%;
+
+  cursor: pointer;
+}
+
+.container {
+  display: block;
+  width: 50%;
+  margin: auto;
+
+}
+
+.btn {
+  margin: 5px;
+  display: inline-block;
+  height: 287px;
+  width: 200px;
+  border: 0;
+  border-radius: 0;
+}
+
+.correct {
+  background-color: blue;
+    opacity: 0.8;
+}
+.game-over {
+  background-color: #252525;
+  opacity: 0.8;
+}
+
+.game-over-text {
+color:  white;
+}
+
+.game-over-time {
+  color: #252525
+}
+
+.john {
+  background-image: url("../images/John.jpg");
+}
+
+.george {
+  background-image: url("../images/George.jpg");
+}
+
+.ringo {
+  background-image: url("../images/ringo.jpg");
+}
+
+.paul {
+  background-image: url("../images/paul.jpg");
+}
+
+.pressed {
+  box-shadow: 0 0 20px white;
+  background-color: grey;
+border-radius: 50%;
+}
+
+.pressed-background {
+  background-color: gainsboro
+}
