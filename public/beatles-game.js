@@ -33,7 +33,7 @@ $(document).click(function() {
 
     chronoStart()
   }
-console.log("clicked");
+
 });
 
 
@@ -140,6 +140,7 @@ function gamePlay() {
       }
     }
   }
+
 }
 
 function gameOver() {
@@ -189,6 +190,7 @@ function playSound(name) {
 
   playSong.play()
   playingSong = playSong
+    console.log(playedSongs);
 }
 
 
@@ -212,5 +214,5 @@ function chronoStart() {
 function chronoStop() {
 
   clearTimeout(timerID)
-  console.log(sec);
+
 }
