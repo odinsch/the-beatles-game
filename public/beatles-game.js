@@ -190,7 +190,7 @@ function playSound(name) {
 
   playSong.play()
   playingSong = playSong
-    console.log(playedSongs);
+
 }
 
 
