@@ -19,6 +19,7 @@ $(document).keypress(function() {
     started = true;
 
     chronoStart()
+    countdown(1)
   }
 
 });
@@ -31,7 +32,9 @@ $(document).click(function() {
     gamePlay()
     started = true;
 
-    chronoStart()
+    chronoStart();
+    countdown(1)
+
   }
 
 });
@@ -83,7 +86,8 @@ function checkAnswer(currentLevel) {
     $("#score").text("You score " + level + " in " + sec + " seconds.");
     $("#score").addClass("game-over-text");
 
-    $("#time").addClass("game-over-time");
+    $("#time").addClass("game-over-text");
+    $("#time").text("Press or click anywhere to try again");
     const image = document.createElement('img')
     image.src = '/images/incorrect1.jpg'
     document.querySelector('.container').appendChild(image)
@@ -204,15 +208,38 @@ function chrono() {
 
   // $("#time").text(sec)
   timerID = setTimeout("chrono()", 10)
+
 }
 
 function chronoStart() {
   start = new Date()
   chrono()
+
 }
 
 function chronoStop() {
 
   clearTimeout(timerID)
 
+}
+
+
+function countdown(minutes) {
+  var seconds = 60;
+  var mins = minutes
+  function tick() {
+      
+      var counter = document.getElementById("time");
+      var current_minutes = mins-1
+      seconds--;
+      counter.innerHTML = (seconds < 10 ? "0" : "") + String(seconds);
+      if( seconds > 0 ) {
+          setTimeout(tick, 1000);
+      } else {
+          if(mins > 1){
+              countdown(mins-1);
+          }
+      }
+  }
+  tick();
 }
